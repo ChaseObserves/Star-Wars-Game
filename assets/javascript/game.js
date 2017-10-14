@@ -5,37 +5,37 @@ $( document ).ready(function() {
 // GLOBAL VARIABLES
 //---------------------------------------------------
 var characters = {
-	"Boba Fett": {
+	"bobafett": {
 		name: "Boba Fett",
 		healthpoints: 120,
 		attackpower: 8,
 		counterattack: 15,
 	},
-	"Chewy": {
+	"chewy": {
 		name: "Chewy",
 		healthpoints: 180,
 		attackpower: 17,
 		counterattack: 4,
 	},
-	"Darth Vader": {
+	"darthvader": {
 		name: "Darth Vader",
 		healthpoints: 140,
 		attackpower: 13,
 		counterattack: 20,
 	},
-	"Luke": {
+	"luke": {
 		name: "Luke",
 		healthpoints: 140,
 		attackpower: 15,
 		counterattack: 17,
 	},
-	"Obi Wan": {
+	"obiwan": {
 		name: "Obi Wan",
 		healthpoints: 110,
 		attackpower: 13,
 		counterattack: 17,
 	},
-	"Yoda": {
+	"yoda": {
 		name: "Yoda",
 		healthpoints: 90,
 		attackpower: 12,
@@ -66,37 +66,32 @@ var allOpponents
 //---------------------------------------------------
 
 
-// Assign whichever fighter is clicked first to the chosenCharacter variable
-	$(".fighter").on("click", function() {
+
+var applyClasses = function() {
+	// Assign whichever fighter is clicked first to the chosenCharacter variable
+	$(".fighter").off().on("click", function() {
 		chosenCharacter = this;
 		$(chosenCharacter).addClass('player1').removeClass('fighter');
 		$('.fighter').addClass('opponent').removeClass('fighter');
 		$("#choose").html("<h3>CHOOSE YOUR OPPONENT</h3>");
 		$("#attacker").append($(this));
+		applyClasses();
 		console.log(chosenCharacter);
 	});
 
 // Change "Choose Your Fighter" to "Choose Your Opponent" and assign choice to chosenOpponent (prevent same choice twice)
-	$(".opponent").on("click", function() {
+	$(".opponent").off().on("click", function() {
 		chosenOpponent = this;
 		$(chosenOpponent).addClass('player2').removeClass('opponent');
-		$('.opponent').addClass('others').removeClass('opponent');
+		$('.opponent').addClass('others animated fadeOutDown').removeClass('opponent');
 		$("#choose").html("<h3>FIGHT!</h3>");
 		$("#defender").append($(this));
+		$('#character-select').fadeOut(1000);
+		$('#attack-button').removeClass('hide');
+		applyClasses();
 		console.log(chosenOpponent);
 	});
-
-
-// No matter what I do, I can't get the first on click event to stop running/assigning new characters
-// into the chosenCharacter variable with each subsequent click.
-
-// Also, I'm not 100% sure how I'm going to connect the divs I've created for each character in the HTML
-// document with the characters array I've created in here with objects and properties that I'll need for
-// the fighting to work
-
-
-})
-
+}
 
 
 
@@ -114,11 +109,25 @@ var allOpponents
 //---------------------------------------------------
 
 
+applyClasses();
+
+})
 
 
 
 
 
+
+
+
+
+
+// No matter what I do, I can't get the first on click event to stop running/assigning new characters
+// into the chosenCharacter variable with each subsequent click.
+
+// Also, I'm not 100% sure how I'm going to connect the divs I've created for each character in the HTML
+// document with the characters array I've created in here with objects and properties that I'll need for
+// the fighting to work
 
 
 
