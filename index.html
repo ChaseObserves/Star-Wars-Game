@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Star Wars Game</title>
+	<!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- CSS Animate -->
+	<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- Game Logic -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+  <!-- jQuery Animation -->
+	<script type="text/javascript" src="assets/javascript/flashing.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron text-center">
+				<img src="http://pm1.narvii.com/6535/37ce0696788ba65a475200adec0fc3da3b2e72a8_00.jpg">
+				<h3 id="choose">CHOOSE YOUR FIGHTER</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6" id="attacker">
+			</div>
+			<div class="col-md-6" id="defender">
+			</div>
+		</div>
+		<div id="character-select">
+			<div class="row">
+				<div class="col-md-4 style_prevu_kit character">
+					<img id="bobafett" class="thumbnail fighter" src="assets/images/bobafett.png">
+				</div>
+				<div class="col-md-4 style_prevu_kit character">
+					<img id="chewy" class="thumbnail fighter" src="assets/images/chewy.png">
+				</div>
+				<div class="col-md-4 style_prevu_kit character">
+					<img id="darthvader" class="thumbnail fighter" src="assets/images/darthvader.png">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 style_prevu_kit character">
+					<img id="luke" class="thumbnail fighter" src="assets/images/luke.png">
+				</div>
+				<div class="col-md-4 style_prevu_kit character">
+					<img id="obiwan" class="thumbnail fighter" src="assets/images/obiwan.png">
+				</div>
+				<div class="col-md-4 style_prevu_kit character">
+					<img id="yoda" class="thumbnail fighter" src="assets/images/yoda.png">
+				</div>
+			</div>
+		</div>
+		<div id="opponent-select">
+		</div>
+	</div>
+
+</body>
+</html>
