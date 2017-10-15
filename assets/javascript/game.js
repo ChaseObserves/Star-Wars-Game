@@ -86,7 +86,7 @@ $(document).ready(function() {
 
 	var renderMessage = function (message) {
 		// Builds the message and appends it to the page.
-		var gameMessageSet = $("#game-message");
+		var gameMessageSet = $("#game-messages");
 		var newMessage = $("<div>").text(message);
 		gameMessageSet.append(newMessage);
 		// If we get this specific message passed in, clear the message
@@ -209,7 +209,7 @@ $(document).ready(function() {
 		if ($("#defender").children().length !== 0) {
 
 			// Creates messages for player's attack and opponent counterattack
-			var attackMessage = "You attacked " + charObj.name + " for " + (currSelectedCharacter.attack * turnCounter) + " damage.";
+			var attackMessage = "You attacked " + currDefender.name + " for " + (currSelectedCharacter.attack * turnCounter) + " damage.";
 			var counterAttackMessage = currDefender.name + " attacked you back for " + currDefender.enemyCounterAttack + " damage.";
 			renderMessage("clearMessage");
 
