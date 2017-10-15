@@ -17,56 +17,34 @@
 	<script type="text/javascript" src="assets/javascript/flashing.js"></script>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="jumbotron text-center">
-				<img src="http://pm1.narvii.com/6535/37ce0696788ba65a475200adec0fc3da3b2e72a8_00.jpg">
-				<h3 id="choose">CHOOSE YOUR FIGHTER</h3>
-			</div>
+	
+	<div class="main-section-title">
+		<img src="http://pm1.narvii.com/6535/37ce0696788ba65a475200adec0fc3da3b2e72a8_00.jpg">
+	</div>
+	<div id="main-game-section">
+		<!-- Where the characters are initially able to be selected. -->
+		<div id="characters-section"></div>
+
+		<div id="selected-character-section">
+			<div id="selected-character"></div>
 		</div>
-		<div class="row">
-			<div class="col-md-5" id="attacker">
-			</div>
-			<div class="col-md-2">
-				<img class="hide" src="assets/images/attack-button.png" id="attack-button">
-			</div>
-			<div class="col-md-5" id="defender">
-			</div>
+
+		<div id="available-to-attack-section"></div>
+
+		<div id="fight-section">
+			<button id="attack-button">
+				<img src="assets/images/attack-button.png">
+			</button>
 		</div>
-		<div id="character-select">
-			<div class="row">
-				<div class="col-md-4 style_prevu_kit character">
-					<img id="bobafett" class="thumbnail fighter" src="assets/images/bobafett.png">
-					<br>
-					<h1><span id="hp-bobafett"></span></h1>
-				</div>
-				<div class="col-md-4 style_prevu_kit character">
-					<img id="chewy" class="thumbnail fighter" src="assets/images/chewy.png">
-					<h1><span id="hp-chewy"></span></h1>
-				</div>
-				<div class="col-md-4 style_prevu_kit character">
-					<img id="darthvader" class="thumbnail fighter" src="assets/images/darthvader.png">
-					<h1><span id="hp-darthvader"></span></h1>
-				</div>
+
+		<div id="action">
+			<div class="characters-section">
+				<div id="defender"></div>
 			</div>
-			<div class="row">
-				<div class="col-md-4 style_prevu_kit character">
-					<img id="luke" class="thumbnail fighter" src="assets/images/luke.png">
-					<h1><span id="hp-luke"></span></h1>
-				</div>
-				<div class="col-md-4 style_prevu_kit character">
-					<img id="obiwan" class="thumbnail fighter" src="assets/images/obiwan.png">
-					<h1><span id="hp-obiwan"></span></h1>
-				</div>
-				<div class="col-md-4 style_prevu_kit character">
-					<img id="yoda" class="thumbnail fighter" src="assets/images/yoda.png">
-					<h1><span id="hp-yoda"></span></h1>
-				</div>
-			</div>
-		</div>
-		<div id="opponent-select">
 		</div>
 	</div>
+	<!-- Area for game messages -->
+	<div id="game-messages"></div>
 
 </body>
 </html>
